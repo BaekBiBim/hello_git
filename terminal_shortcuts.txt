@@ -1,0 +1,86 @@
+==============================================
+       터미널 단축키 모음 (Windows / Mac)
+       * GNU readline 기반 (bash/zsh/sh)
+       * Mac: Option 키 = Alt(Meta). 터미널에서
+         "Use Option as Meta" 옵션 활성화 권장
+==============================================
+
+[ 커서 이동 (Cursor Movement) ]
+Windows (Ctrl)      Mac (Control/Option)   기능
+------------------------------------------------
+Ctrl + A            Ctrl + A / ⌘← (일부)   줄의 맨 앞으로 이동 (Home)
+Ctrl + E            Ctrl + E / ⌘→           줄의 맨 끝으로 이동 (End)
+Ctrl + B            Ctrl + B                한 글자 뒤로 (←)
+Ctrl + F            Ctrl + F                한 글자 앞으로 (→)
+Alt  + B            Option + B              한 단어 뒤로
+Alt  + F            Option + F              한 단어 앞으로
+Ctrl + XX           Ctrl + XX               현재 위치 ↔ 줄 시작 토글
+
+[ 삭제 / 편집 (Editing) ]
+Windows             Mac                     기능
+------------------------------------------------
+Ctrl + D            Ctrl + D                커서 위치 글자 삭제 (또는 EOF/로그아웃)
+Ctrl + H / Backspace Backspace              이전 글자 삭제
+Ctrl + W            Option + Delete         커서 앞 단어 삭제
+Alt  + D            Option + D              커서 뒤 단어 삭제
+Ctrl + K            Ctrl + K                커서부터 줄 끝까지 삭제 (kill)
+Ctrl + U            Ctrl + U                줄 시작부터 커서까지 삭제
+Ctrl + Y            Ctrl + Y                최근 삭제 내용 붙여넣기 (yank)
+Alt  + Y            Option + Y              이전 yank 내용 순환
+Ctrl + T            Ctrl + T                글자 위치 서로 바꾸기 (transpose)
+Alt  + T            Option + T              단어 위치 서로 바꾸기 (transpose words)
+Alt  + U            Option + U              커서부터 단어 끝을 대문자로
+Alt  + L            Option + L              커서부터 단어 끝을 소문자로
+Alt  + C            Option + C              커서 위치 글자 대문자화 후 다음 단어로
+
+[ 히스토리 (History) ]
+Windows             Mac                     기능
+------------------------------------------------
+Ctrl + P            Ctrl + P / ↑           이전 명령어
+Ctrl + N            Ctrl + N / ↓           다음 명령어
+Ctrl + R            Ctrl + R                역방향 히스토리 검색 (reverse search)
+Ctrl + S            Ctrl + S                정방향 히스토리 검색 (일부 터미널에서 흐름제어 충돌 주의)
+Alt  + .            Option + .              마지막 명령어의 마지막 인자 삽입
+Alt  + N            Option + N               히스토리 검색 시 다음 매치
+Ctrl + G            Ctrl + G                검색 모드 취소
+!! (Enter)          !!                      이전 명령어 재실행 (history 확장)
+!$ / Alt+.          !$ / Option+.           마지막 명령어 인자
+
+[ 제어 / 프로세스 (Control) ]
+Windows             Mac                     기능
+------------------------------------------------
+Ctrl + C            Ctrl + C                실행 중 프로세스 중단 (SIGINT)
+Ctrl + Z            Ctrl + Z                프로세스 일시 정지 (SIGTSTP) → bg/fg로 재개
+Ctrl + D            Ctrl + D                EOF 전송 (입력 종료 / 로그아웃)
+Ctrl + L            Ctrl + L                화면 지우기 (clear)
+Ctrl + Q            Ctrl + Q                흐름 제어 재개 (XON)
+Ctrl + S            Ctrl + S                흐름 제어 일시정지 (XOFF) - 보통 비활성화됨
+Ctrl + \            Ctrl + \                SIGQUIT (코어 덤프)
+
+[ 잡/백그라운드 (Jobs) ]
+Windows             Mac                     기능
+------------------------------------------------
+jobs                jobs                    백그라운드 작업 목록
+fg %n               fg %n                   n번 작업 포그라운드로
+bg %n               bg %n                   n번 작업 백그라운드로
+disown              disown                  셸 종료 후에도 계속 실행
+
+[ 완성 / 기타 (Completion & Misc) ]
+Windows             Mac                     기능
+------------------------------------------------
+Tab                 Tab                     자동완성
+Tab Tab             Tab Tab                 후보 목록 표시
+Ctrl + I            Ctrl + I                Tab과 동일
+Alt  + ?            Option + ?              가능한 완성 목록
+Alt  + *            Option + *              모든 완성 inserted
+Ctrl + V            Ctrl + V                다음 입력을 리터럴로 (quoted insert)
+Ctrl + _            Ctrl + _ / ⌘Z (일부)   Undo (되돌리기)
+------------------------------------------------
+주의:
+ - Windows: Cmd/PowerShell은 readline과 다를 수 있음. WSL/bash 사용 시 위 기준 적용.
+ - Mac: 기본 Terminal.app에서 Option을 Meta로 쓰려면
+   Terminal → 설정 → 프로파일 → Keyboard → "Use Option as Meta key" 활성화.
+ - iTerm2: Preferences → Keys → Left/Right Option key → Esc+.
+==============================================
+ 생성일: 메모용 (txt)  |  셸: bash/zsh readline 기준
+==============================================
